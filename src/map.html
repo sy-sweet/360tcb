@@ -1,0 +1,95 @@
+<!doctype html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <style type="text/css">
+      body,html,#container{
+        height: 100%;
+        margin: 0px;
+      }
+      #container{
+      	width:500px;
+      	height:500px;
+      }
+    </style>
+    <title>快速入门</title>
+  </head>
+  <body>
+  	<input type="text" id="search"   />
+    <div id="container" tabindex="0"></div>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.3&key=2218d4200a96818c6fbc4db6c36d3ed8"></script>
+    <script type="text/javascript">
+      //创建地图
+      var map = new AMap.Map('container',{
+            resizeEnable: true,//是否缩放
+            zoom: 10,
+            center: [116.480983, 40.0958]
+        });
+        //添加地图插件
+        AMap.plugin(['AMap.ToolBar','AMap.Scale','AMap.OverView'],
+    function(){
+        map.addControl(new AMap.ToolBar());
+
+        map.addControl(new AMap.Scale());
+
+        map.addControl(new AMap.OverView({isOpen:true}));
+});
+//添加标记
+//		marker = new AMap.Marker({
+//		position: [116.159,40.1805],//经纬度
+//		title:"北京吉利大学",//地方
+//		map: map//在那个地图上添加
+//		//icon://标记的图片路径
+//		    });
+		    
+		  //引入插件  
+    AMap.service('AMap.Geocoder',function(){//回调函数
+    //实例化Geocoder
+    geocoder = new AMap.Geocoder({
+        city: "010"//城市，默认：“全国”
+    });
+    //TODO: 使用geocoder 对象完成相关功能
+    
+    var lnglatXY=[116.396574, 39.992706];//地图上所标点的坐标
+    geocoder.getAddress(lnglatXY, function(status, result) {
+    if (status === 'complete' && result.info === 'OK') {
+    	console.log(result);
+       //获得了有效的地址信息:
+       //即，result.regeocode.formattedAddress
+    }else{
+       //获取地址失败
+    }
+});  
+
+//获取经纬度
+geocoder.getLocation("北京吉利大学", function(status, result) {
+    if (status === 'complete' && result.info === 'OK') {
+    	console.log(result);
+        //TODO:获得了有效经纬度，可以做一些展示工作
+        //比如在获得的经纬度上打上一个Marker
+    }else{
+        //获取经纬度失败
+    }
+}); 
+})
+    //自动补全功能
+  AMap.plugin(['AMap.Autocomplete','AMap.PlaceSearch'],function(){
+     var autoOptions = {
+          city: "北京", //城市，默认全国
+          input: "search"//使用联想输入的input的id
+     };
+     autocomplete= new AMap.Autocomplete(autoOptions);
+     var placeSearch = new AMap.PlaceSearch({
+              city:'北京',
+              map:map
+     });
+     AMap.event.addListener(autocomplete, "select", function(e){
+           //TODO 针对选中的poi实现自己的功能
+           placeSearch.search(e.poi.name)
+     });
+ });  
+
+    </script>
+  </body>
+</html>

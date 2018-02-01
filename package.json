@@ -1,0 +1,23 @@
+{
+  "name": "360tcb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sy-sweet/360tcb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sy-sweet/360tcb/issues"
+  },
+  "homepage": "https://github.com/sy-sweet/360tcb#readme",
+  "devDependencies": {
+    "express": "^4.16.2"
+  }
+}
