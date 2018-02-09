@@ -1,0 +1,367 @@
+*{
+	margin:0px;
+	padding:0px;
+	color:gray;
+}
+#nav{
+	width:100%;
+	height:30px;
+	background:#F7F7F7;
+}
+#nav .left{
+	margin-left:50px;
+	font-size:small;
+}
+#nav .left li{
+	float:left;
+	list-style: none;
+	margin-left:10px;
+	line-height: 30px;
+}
+#switcher:hover{
+	cursor:pointer;
+}
+#nav .rigth{
+	float:right;
+	margin-right:50px;
+	font-size:small;
+}
+#nav .rigth li{
+	float:left;
+	list-style: none;
+	margin-right:10px;
+	line-height: 30px;
+}
+select{
+	border:none;
+	background:#F7F7F7;
+}
+.color{
+	color:gainsboro;
+}
+.box{
+	height:260px;
+	width:550px;
+	display: none;
+	position:absolute;
+	top:30px;
+	left:100px;
+	background:white;
+	z-index: 2;
+}
+.smallbox{
+	width:95%;
+	height:85%;
+	border:1px solid gainsboro;
+	margin:20px auto;
+	font-size:small;
+	position:relative;
+}
+.smallbox .left{
+	float:left;
+}
+.gb{
+	width:53px;
+	height:20px;
+	border:1px solid gainsboro;
+	float:right;
+	text-align: center;
+	color:gainsboro;
+}
+.dw{
+	position:absolute;
+	right:5px;
+	color:gainsboro;
+}
+.hot1{
+	width:30px;
+	float:left;
+	margin-top:20px;
+}
+.hot{
+	width:380px;
+	height:50px;
+	float:left;
+	margin-top:20px;
+	margin-left:50px;
+}
+.hot li{
+	float:left;
+	list-style: none;
+	margin-left:20px;
+}
+.top{
+	width:95%;
+	/*height:70px;*/
+	margin:20px auto;
+	overflow: hidden;
+}
+.bottom{
+	width:95%;	
+	margin:0 auto;
+	overflow: hidden;
+}
+.list1{
+	width:30px;
+	float:left;
+}
+.list{
+	width:380px;
+	height:100px;
+	float:left;
+	margin-left:54px;
+}
+.list li{
+	float:left;
+	list-style: none;
+	margin-left:8px;
+}
+/*body{
+	position:relative;
+}*/
+#head{
+	width:1250px;
+	height:60px;
+	margin:20px auto;
+	position:relative;
+}
+#head .left{
+	float:left;
+}
+#head .right{
+	float:right;
+}
+#head .right li{
+	float:left;
+	list-style: none;
+	margin-right:30px;
+	line-height: 60px;
+}
+/*轮播图*/
+.swiper-wrapper{
+	margin-left:50px;
+}
+#qj{
+	position:relative;
+}
+.icon{
+	margin-top:30px;
+}
+.introduce{
+	width:240px;
+	height:340px;
+	background:blue;
+	position:absolute;
+	left:50px;
+	top:0px;
+	z-index: 1;
+	opacity: 0.5;
+}
+.icon1{
+	position:absolute;
+	right:0px;
+	top:30px;
+}
+.introduce ul li{
+	list-style: none;
+	width:100%;
+	border-bottom: 1px solid gray;
+	height:85px;
+	line-height: 85px;
+    text-align: center;
+    color:white;
+}
+.introduce ul li:hover{
+	cursor:pointer;
+	background:green;
+}
+.last{
+	border-bottom: none;
+}
+/*修手机*/
+#fix{
+	width:800px;
+	height:400px;
+	border:1px solid green;
+	position:absolute;
+	top:0px;
+	left:300px;
+	z-index: 1;
+	display: none;
+	background:white;
+}
+#fix div{
+	margin-top:20px;
+	margin-left:30px;
+}
+.top{
+	display: flex;
+}
+.fixW{
+	width:800px;
+	height:400px;
+	border:1px solid green;
+	position:absolute;
+	top:0px;
+	left:300px;
+	z-index: 1;
+	display: none;
+	background:white;
+}
+.bottom .left{
+	width:200px;
+	height:50px;
+	margin-top:20px;
+	font-size:small;
+}
+.bottom{
+	display: flex;
+}
+.hw{
+	overflow: hidden;
+}
+.hw div{
+	float:left;
+	margin-left:50px;
+	width:150px;
+	height:50px;
+	border:1px solid gainsboro;
+	margin-top:10px ;
+	text-align: center;
+	line-height:55px ;
+	color:black;
+	font-size:small;
+}
+.top .left{
+	width:150px;
+	height:50px;
+	margin-top:20px;
+	font-size:small;
+}
+.oth div{
+	float:left;
+	margin-left:60px;
+	width:150px;
+	height:50px;
+	border:1px solid gainsboro;
+	margin-top:10px ;
+	text-align: center;
+	line-height:55px ;
+	color:black;
+	font-size:small;
+}
+.tel{
+	width:800px;
+	height:400px;
+	border:1px solid green;
+	position:absolute;
+	top:0px;
+	left:300px;
+	z-index: 1;
+	display: none;
+	background:white;
+}
+.tel div{
+	width:100px;
+	height:50px;
+	border:1px solid gainsboro;
+	margin-top:15px ;
+	text-align: center;
+	line-height:55px ;
+	color:black;
+	font-size:small;
+	float: left;
+	margin-left:20px;
+}
+.secound{
+	width:800px;
+	height:400px;
+	border:1px solid green;
+	position:absolute;
+	top:0px;
+	left:300px;
+	z-index: 1;
+	display: none;
+	background:white;
+}
+.secound div{
+	width:100px;
+	height:50px;
+	border:1px solid gainsboro;
+	margin-top:15px ;
+	text-align: center;
+	line-height:55px ;
+	color:black;
+	font-size:small;
+	float: left;
+	margin-left:20px;
+}
+/*手机换屏*/
+.desic{
+	width:1150px;
+	height:170px;
+	display: flex;
+	justify-content: space-around;
+	margin-left:50px;
+}
+/*热门手机回收*/
+.recycle{
+	width:1200px;
+	height:30px;
+	margin-left:50px;
+	margin-top:30px;
+	display: flex;
+	justify-content: space-between;
+}
+.p_img{
+	width:1200px;
+	margin-left:50px;
+	margin-top:20px;
+	display: flex;
+}
+.phone1 img{
+	 width:120px;
+	 height:230px;
+}
+.top1 div{
+	float:left;
+	margin-left:70px;
+}
+.bottom1 div{
+	float:left;
+	margin-left:85px;
+	margin-top:30px;
+}
+.bottom1 div:nth-child(3){
+	margin-left:100px;
+}
+.bottom1 div:nth-child(4){
+	margin-left:120px;
+}
+.bottom1 div:nth-child(5){
+	margin-left:110px;
+}
+.top2{
+	overflow: hidden;
+}
+.top2 div{
+	float:left;
+	margin-left:60px;
+}
+.top2 div img{
+	 width:130px;
+	 height:230px;
+}
+.jx{
+	display: flex;
+}
+.center{
+	float:left;
+	border:1px solid red;
+}
+.center .center1{
+	float:left;
+}
+.center .center2{
+	float:left;
+}

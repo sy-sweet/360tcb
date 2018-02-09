@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/first.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="../css/swiper.css" />
+	</head>
+
+	<body>
+		<!--导航栏部分-->
+		<div id="nav">
+			<ul class="left">
+				<li class="name">北京</li>
+				<li id="switcher">[切换城市]</li>
+				<li class="color">|</li>
+				<li>同城帮首页</li>
+			</ul>
+			<ul class="rigth">
+				<li>登录</li>
+				<li class="color">|</li>
+				<li>注册</li>
+				<li class="color">|</li>
+				<li>我的订单</li>
+				<li class="color">|</li>
+				<li>在线客服（9:00-21:00）</li>
+				<li class="color">|</li>
+				<li>
+					<select>
+						<option>客户服务</option>
+						<option>帮助中心</option>
+						<option>维修付款</option>
+					</select>
+				</li>
+				<li class="color">|</li>
+				<li>论坛</li>
+				<li class="color">|</li>
+				<li>投诉建议</li>
+			</ul>
+		</div>
+		<div>
+			<div class="box">
+				<div class="smallbox">
+					<div class="left">城市列表</div>
+					<div class="gb">关闭</div>
+					<div class="dw">X</div>
+					<div class="top">
+						<div class="hot1">热门</div>
+						<div class="hot">
+							<ul>
+								<li>北京</li>
+							</ul>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="list1">拼音</div>
+						<div class="list">
+							<ul>
+								<li class="changeCity">a-z</li>
+								<li class="city"></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div>
+				</div>
+			</div>
+		</div>
+		<!--<div class="sphere">
+			
+		</div>-->
+		<!--头部-->
+		<div id="head">
+			<div class="left">
+				<img src="../img/Image 3.png" />
+			</div>
+			<div class="right">
+				<ul>
+					<li>二手优品</li>
+					<li>手机回收</li>
+					<li>手机维修</li>
+					<li>电脑维修</li>
+					<li>以旧换新</li>
+					<li>手机租用</li>
+				</ul>
+			</div>
+		</div>
+
+		<!--轮播图-->
+		<div id="qj">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="../img/img1.png" /></div>
+					<div class="swiper-slide"><img src="../img/img2.png" /></div>
+					<div class="swiper-slide"><img src="../img/img3.jpg" /></div>
+					<div class="swiper-slide"><img src="../img/img4.png" /></div>
+				</div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>
+			</div>
+			<div class="introduce">
+				<ul>
+					<li class="fix1">修手机/pad </li>
+					<li class="window">修电脑 </li>
+					<li class="telp">卖手机/电脑 </li>
+					<li class="last">买二手机 </li>
+				</ul>
+			</div>
+			<div class="icon1">
+				<img src="../img/img.png" class="icon" />
+			</div>
+			<!--修手机-->
+			<div id="fix">
+				<div></div>
+			</div>
+
+			<!--修电脑-->
+			<div class="fixW">
+				<div class="top">
+					<div class="left">
+						热门问题：
+					</div>
+					<div class="hw">
+						<div></div>
+					</div>
+				</div>
+				<div class="bottom">
+					<div class="left">
+						其他问题:
+					</div>
+					<div class="oth">
+						<div></div>
+					</div>
+				</div>
+			</div>
+			<!--卖手机/电脑-->
+			<div class="tel">
+
+			</div>
+			<!--买二手机-->
+			<div class="secound">
+
+			</div>
+			
+			<!--手机换屏-->
+			<div class="desic">
+				<a href=""><img src="../img/Image 10.png" /></a>
+				<a href=""><img src="../img/Image 12.png" /></a>
+				<a href=""><img src="../img/Image 13.png" /></a>
+				<a href=""><img src="../img/Image 14.png" /></a>
+			</div>
+			<!--热门手机回收-->
+			<div class="recycle">
+				<h2 class="left">热门手机回收</h2>
+				<div class="right">查看更多</div>
+			</div>
+			<div class="p_img">
+				<div>
+					<a href=""><img src="../img/Image 17.png"/></a>
+				</div>
+				<div class="phone1">
+					<div class="top1"></div>
+					<div class="bottom1"></div>
+				</div>
+				
+			</div>
+			<!--优品精选-->
+			<div class="recycle">
+				<h2 class="left">优品精选</h2>
+				<div class="right">查看更多</div>
+			</div>
+			<div class="p_img">
+				<div class="jx">
+					<div>
+					  <a href=""><img src="../img/Image 18.png"/></a>
+					</div>
+					<div class="superior">
+						<div class="top2"></div>
+							<div class="center">
+								<div class="center1"></div>
+								<div class="center2"></div>
+							</div>
+							
+						<div class="bottom2"></div>
+					</div>
+				</div>
+				
+			</div>
+			
+	</body>
+	<!--热门城市-->
+	<script type="text/html" id="tempHot">
+		<%for(var i=0; i<hotCity.length;i++){%>
+		<li>
+			<%=hotCity[i].name%>
+		</li>
+		<%}%>
+	</script>
+
+	<!--城市列表-->
+	<script type="text/html" id="tempList">
+		<%for(var k in obj){%>
+		<li onclick="changeCity('<%=k%>')">
+			<%=k%>
+		</li>
+		<%}%>
+	</script>
+	<script type="text/html" id="tempCity">
+		<%for(var i=0; i<city.length;i++){%>
+		<li>
+			<%=city[i].name%>
+		</li>
+		<%}%>
+	</script>
+
+	<!--修手机-->
+	<script type="text/html" id="tempFix">
+		<%for(var i=0;i<fixObj.length;i++){%>
+
+		<div>
+			<%=fixObj[i].name%>
+		</div>
+
+		<%}%>
+	</script>
+
+	<!--修电脑-->
+	<script type="text/html" id="tempht">
+		<%for(var i=0;i<hotObj.length;i++){%>
+		<div>
+			<%=hotObj[i].name%>
+		</div>
+		<%}%>
+	</script>
+	<script type="text/html" id="tempOther">
+		<%for(var i=0;i<otherObj.length;i++){%>
+		<div>
+			<%=otherObj[i].name%>
+		</div>
+		<%}%>
+	</script>
+	<!--卖手机/电脑-->
+	<script type="text/html" id="tempTel">
+		<%for(var i=0;i<telObj.length;i++){%>
+		<div>
+			<%=telObj[i].name%>
+		</div>
+		<%}%>
+	</script>
+	<!--买二手机-->
+	<script type="text/html" id="tempBuy">
+		<%for(var i in buy){%>
+		<div>
+			<%=buy[i]%>
+		</div>
+		<%}%>
+	</script>
+	<!--热门手机回收-->
+	<script type="text/html" id="tempPhone">
+		<%for(var i in phoneObj){%>
+			<div><a href=""><img src="<%=phoneObj[i].img_url%>"/></a></div>
+			<%}%>
+	</script>
+	<script type="text/html" id="temPpp">
+		<%for(var i in phoneObj){%>
+			<div><%=phoneObj[i].model_alis%></div>
+			<%}%>
+	</script>
+	<!--精选优品-->
+	<script type="text/html" id="tempSuperior">
+		<%for(var i in superiorObj){%>
+			<div><a href=""><img src="<%=superiorObj[i].thum_img.big%>" alt="" /></a></div>
+			<%}%>
+	</script>
+	<script type="text/html" id="tempSuperior1">
+		<%for(var i in superiorObj){%>
+			<div><%=superiorObj[i].brand_name%></div>
+			<%}%>
+	</script>
+	<script type="text/html" id="tempSuperior2">
+		<%for(var i in superiorObj){%>
+			<div><%=superiorObj[i].model_name%></div>
+			<%}%>
+	</script>
+
+	<script src="../js/baiduTemplate.js"></script>
+
+	<script src="../js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript">
+		var cityList;
+		var hotCity;
+		$("#switcher").click(function() {
+			$(".box").show();
+
+			$.getJSON("http://localhost:8080/data/city.json", function(res) {
+				console.log(res);
+				var cityObj = res.result;
+				cityList = cityObj.citylist;
+				hotCity = cityObj.hotcity;
+				$(".hot").html(baidu.template("tempHot", { hotCity: hotCity }))
+				$(".changeCity").html(baidu.template("tempList", { obj: cityList }))
+			})
+
+		})
+
+		function changeCity(key) {
+			var city = cityList[key];
+			$(".city").html(baidu.template("tempCity", { city: city }))
+		}
+		$(".gb").click(function() {
+			$(this).parent().parent().remove();
+		})
+	</script>
+	<!--轮播图-->
+	<script src="../js/swiper.js"></script>
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+			autoplay: true,
+			pagination: {
+				el: '.swiper-pagination',
+			},
+		});
+	</script>
+	<!--修手机-->
+	<script type="text/javascript">
+		var fixObj;
+		var fixList
+		$(".fix1").hover(function() {
+			$("#fix").show();
+
+			$.getJSON("http://localhost:8080/data/xiu1.json", function(res) {
+				console.log(res);
+				fixObj = res.result;
+				fixList = fixObj.list;
+				$("#fix").html(baidu.template("tempFix", { fixObj: fixObj }))
+
+			})
+		});
+		$(document).hover(function() {
+			$("#fix").hide();
+		});
+	</script>
+	<!--修电脑-->
+	<script type="text/javascript">
+		var hotObj;
+		var otherObj;
+		$(".window").hover(function() {
+			$(".fixW").show();
+
+			$.getJSON("http://localhost:8080/data/xiu2.json", function(res) {
+				console.log(res);
+				var windowObj = res.result;
+				hotObj = windowObj.hot;
+				otherObj = windowObj.other;
+				$(".hw").html(baidu.template("tempht", { hotObj: hotObj }))
+				$(".oth").html(baidu.template("tempOther", { otherObj: otherObj }))
+			})
+		});
+		$(document).hover(function() {
+			$(".fixW").hide();
+		});
+	</script>
+	<!--卖手机/电脑-->
+	<script type="text/javascript">
+		$(".telp").hover(function() {
+			$(".tel").show();
+
+			$.getJSON("http://localhost:8080/data/xiu3.json", function(res) {
+				console.log(res);
+				var telObj = res.result;
+				$(".tel").html(baidu.template("tempTel", { telObj: telObj }))
+			})
+		});
+		$(document).hover(function()  {
+			$(".tel").hide();
+		});
+	</script>
+	<!--买二手机-->
+	<script type="text/javascript">
+		var buy;
+		$(".last").hover(function() {
+			$(".secound").show();
+
+			$.getJSON("http://localhost:8080/data/xiu4.json", function(res) {
+				console.log(res);
+				buy = res.result;
+				$(".secound").html(baidu.template("tempBuy", { buy: buy }))
+			})
+		});
+		$(document).hover(function() {
+			$(".secound").hide();
+		});
+	</script>
+	<script type="text/javascript">
+		var phoneObj;
+		$.getJSON("http://localhost:8080/data/shoujihuishou.json",function(res){
+			console.log(res);
+			phoneObj=res.result;
+			$(".top1").html(baidu.template("tempPhone",{phoneObj:phoneObj}))
+			$(".bottom1").html(baidu.template("temPpp",{phoneObj:phoneObj}))
+		    
+		})
+	</script>
+	<!--精品优选-->
+	<script type="text/javascript">
+		$.getJSON("http://localhost:8080/data/youpinjingxuan.json",function(res){
+			console.log(res);
+			var superiorObj=res.result;
+			$(".top2").html(baidu.template("tempSuperior",{superiorObj:superiorObj}))
+			$(".center1").html(baidu.template("tempSuperior1",{superiorObj:superiorObj}))
+			$(".center2").html(baidu.template("tempSuperior2",{superiorObj:superiorObj}))
+            
+
+		})
+	</script>
+
+</html>
